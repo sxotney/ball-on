@@ -48,9 +48,14 @@ function describe(d: Diagram): string {
 }
 
 export function renderDiagram(d: Diagram): SVGSVGElement {
+  const half = LENGTH / 2;
+  const [top, height] =
+    d.view === 'top' ? [-CUSHION, half + 2 * CUSHION]
+    : d.view === 'bottom' ? [half - CUSHION, half + 2 * CUSHION]
+    : [-CUSHION, LENGTH + 2 * CUSHION];
   const svg = el('svg', {
-    viewBox: `${-CUSHION} ${-CUSHION} ${WIDTH + 2 * CUSHION} ${LENGTH + 2 * CUSHION}`,
-    class: 'table-diagram',
+    viewBox: `${-CUSHION} ${top} ${WIDTH + 2 * CUSHION} ${height}`,
+    class: `table-diagram view-${d.view ?? 'full'}`,
     role: 'img',
     'aria-label': describe(d),
   });

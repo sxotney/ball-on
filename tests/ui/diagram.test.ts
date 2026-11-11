@@ -30,3 +30,17 @@ describe('renderDiagram', () => {
     expect(SPOTS.brown.y).toBeGreaterThan(SPOTS.blue.y);
   });
 });
+
+describe('half-table views', () => {
+  const height = (svg: SVGSVGElement) => Number(svg.getAttribute('viewBox')!.split(' ')[3]);
+  it('crops to the top half', () => {
+    const full = renderDiagram({ balls: [] });
+    const top = renderDiagram({ balls: [], view: 'top' });
+    expect(height(top)).toBeLessThan(height(full) * 0.6);
+    expect(Number(top.getAttribute('viewBox')!.split(' ')[1])).toBeLessThan(0);
+  });
+  it('crops to the baulk half', () => {
+    const bottom = renderDiagram({ balls: [], view: 'bottom' });
+    expect(Number(bottom.getAttribute('viewBox')!.split(' ')[1])).toBeGreaterThan(1500);
+  });
+});

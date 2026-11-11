@@ -84,6 +84,7 @@ function validateDiagram(d: unknown, err: Err): void {
   }
   if (whites > 1) err('diagram', 'more than one white ball');
   if (d.caption !== undefined && typeof d.caption !== 'string') err('diagram', 'caption must be a string');
+  if (d.view !== undefined && !['full', 'top', 'bottom'].includes(d.view as string)) err('diagram', 'view must be full, top or bottom');
 }
 
 export function validateOptionsList(o: unknown): string[] {

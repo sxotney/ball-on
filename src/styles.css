@@ -1,0 +1,73 @@
+:root {
+  --bg: #f6f4ee;
+  --surface: #ffffff;
+  --text: #1c1f1d;
+  --muted: #5d655f;
+  --line: #d9d6cc;
+  --accent: #1f7a3f;
+  --accent-text: #ffffff;
+  --pressed: #e2efe6;
+  --ok: #1f7a3f;
+  --bad: #b3261e;
+  --radius: 12px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111513;
+    --surface: #1b211e;
+    --text: #e9ece9;
+    --muted: #9aa49d;
+    --line: #2f3833;
+    --accent: #3fae68;
+    --accent-text: #08130c;
+    --pressed: #23382b;
+    --ok: #5bc882;
+    --bad: #ff8a80;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body { font: 17px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-text-size-adjust: 100%; }
+main { max-width: 560px; margin: 0 auto; padding: 16px 16px calc(32px + env(safe-area-inset-bottom)); }
+h1 { font-size: 1.6rem; margin: 8px 0 16px; }
+h2 { font-size: 1.1rem; margin: 24px 0 8px; }
+button { font: inherit; color: inherit; min-height: 44px; border-radius: var(--radius); cursor: pointer; }
+button:disabled { opacity: 0.45; cursor: default; }
+.primary { width: 100%; margin-top: 16px; padding: 12px 16px; border: 0; background: var(--accent); color: var(--accent-text); font-weight: 600; }
+.secondary { padding: 8px 14px; border: 1px solid var(--line); background: var(--surface); }
+.link { background: none; border: 0; color: var(--accent); text-decoration: underline; padding: 0; }
+.drill { display: flex; justify-content: space-between; align-items: center; font-size: 1.15rem; min-height: 64px; }
+.count { font-weight: 400; opacity: 0.85; }
+.topics { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.topic { width: 100%; display: flex; justify-content: space-between; padding: 10px 14px; border: 1px solid var(--line); background: var(--surface); text-align: left; }
+.empty, .note, .progress, .kind, .citations { color: var(--muted); }
+.progress { font-size: 0.85rem; margin: 0 0 8px; }
+.prompt { font-size: 1.05rem; margin: 0 0 12px; }
+.diagram { margin: 0 auto 12px; max-width: 340px; }
+.diagram:has(.view-full) { max-width: 220px; }
+.table-diagram { width: 100%; height: auto; display: block; }
+fieldset { border: 0; padding: 0; margin: 16px 0 0; }
+legend { font-weight: 600; margin-bottom: 8px; padding: 0; }
+.chips, .segments, .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip, .seg, .choice { padding: 8px 12px; border: 1px solid var(--line); background: var(--surface); }
+.seg { flex: 1 1 0; min-width: 52px; }
+[aria-pressed="true"] { background: var(--pressed); border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.options { display: grid; gap: 6px; }
+.option { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); min-height: 44px; }
+.option input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--accent); flex: none; }
+.recall-number { width: 100%; font: inherit; font-size: 1.4rem; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--text); }
+textarea { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--text); margin-top: 12px; }
+.verdict.ok { color: var(--ok); }
+.verdict.bad { color: var(--bad); }
+.marks { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.mark { display: grid; grid-template-columns: 24px 1fr; gap: 2px 8px; padding: 10px 12px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.mark .yours, .mark .correct { grid-column: 2; }
+.mark .correct { color: var(--ok); font-weight: 600; }
+.tick { color: var(--ok); font-weight: 700; }
+.cross { color: var(--bad); font-weight: 700; }
+.flag { margin-top: 16px; }
+.footer { margin-top: 32px; text-align: center; }
+.footer a { color: var(--accent); }
+.score { font-size: 1.3rem; }
+.mark .yours, .mark .correct { white-space: pre-line; }

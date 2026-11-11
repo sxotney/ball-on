@@ -62,3 +62,13 @@ describe('validateOptionsList', () => {
     expect(errors.join('\n')).toContain('citation');
   });
 });
+
+describe('diagram view', () => {
+  it('accepts top, bottom and full', () => {
+    for (const view of ['top', 'bottom', 'full'] as const) {
+      expect(validateQuestion(scenario({ diagram: { balls: [], view } }), OPTION_IDS, TOPICS)).toEqual([]);
+    }
+  });
+  it('rejects an unknown view', () =>
+    expect(validateQuestion({ ...scenario(), diagram: { balls: [], view: 'left' } }, OPTION_IDS, TOPICS).join()).toContain('view'));
+});

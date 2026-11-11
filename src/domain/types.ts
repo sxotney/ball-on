@@ -27,7 +27,9 @@ export const BALL_COLOURS: readonly BallColour[] = ['white', 'red', 'yellow', 'g
 
 /** Coordinates in mm on the playing area: x 0–1778 across, y 0–3569 from the Top Cushion. */
 export interface DiagramBall { ball: BallColour; x: number; y: number }
-export interface Diagram { balls: DiagramBall[]; caption?: string }
+export type DiagramView = 'full' | 'top' | 'bottom';
+/** `view` crops to one half of the table so balls are bigger on a phone; default 'full'. */
+export interface Diagram { balls: DiagramBall[]; caption?: string; view?: DiagramView }
 
 interface Base {
   id: string;
