@@ -22,6 +22,9 @@ export function rulingForm(options: OptionDef[], onChange: (r: Ruling | null) =>
     else {
       if (c === 'NO_FOUL') calls.clear();
       else calls.delete('NO_FOUL');
+      // FOUL AND A MISS is the call for a foul with a miss; it replaces FOUL rather than joining it.
+      if (c === 'FOUL') calls.delete('FOUL_AND_A_MISS');
+      if (c === 'FOUL_AND_A_MISS') calls.delete('FOUL');
       calls.add(c);
     }
     callButtons.forEach((b) => b.setAttribute('aria-pressed', String(calls.has(b.dataset.call as Call))));

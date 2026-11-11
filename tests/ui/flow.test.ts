@@ -115,3 +115,18 @@ describe('Judgement Calls', () => {
     expect(load('learner', storage).progress).toEqual({});
   });
 });
+
+describe('Call chips', () => {
+  it('treats FOUL and FOUL AND A MISS as alternatives', async () => {
+    mount([scenario()]);
+    click(root, '[data-action="drill"]');
+    await flush();
+    const pressed = () => [...root.querySelectorAll('[data-call][aria-pressed="true"]')].map((b) => (b as HTMLElement).dataset.call);
+    click(root, '[data-call="FOUL"]');
+    click(root, '[data-call="FOUL_AND_A_MISS"]');
+    expect(pressed()).toEqual(['FOUL_AND_A_MISS']);
+    click(root, '[data-call="FREE_BALL"]');
+    click(root, '[data-call="FOUL"]');
+    expect(pressed()).toEqual(['FOUL', 'FREE_BALL']);
+  });
+});

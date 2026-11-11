@@ -51,6 +51,7 @@ function validateRuling(r: unknown, optionIds: Set<string>, err: Err): void {
     for (const c of calls) if (!(CALLS as readonly string[]).includes(c)) err('ruling.calls', `unknown call ${c}`);
     if (new Set(calls).size !== calls.length) err('ruling.calls', 'duplicate call');
     if (calls.includes('NO_FOUL') && calls.length > 1) err('ruling.calls', 'NO_FOUL cannot be combined with other calls');
+    if (calls.includes('FOUL') && calls.includes('FOUL_AND_A_MISS')) err('ruling.calls', 'use FOUL_AND_A_MISS alone, not with FOUL');
   }
   if (!(PENALTY_POINTS as readonly unknown[]).includes(r.penaltyPoints)) err('ruling.penaltyPoints', 'must be 0, 4, 5, 6 or 7');
   else if (isStringArray(calls) && calls.includes('NO_FOUL') && r.penaltyPoints !== 0)

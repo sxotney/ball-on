@@ -31,6 +31,33 @@ describe('Settings', () => {
     expect(load('learner', storage).flags).toEqual([]);
   });
 
+  it('tells the Learner when flags were copied instead of shared', async () => {
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    mount({ clipboard: { writeText } as unknown as Clipboard });
+    click(root, '[data-action="send-flags"]');
+    await flush();
+    expect(root.textContent).toContain('Flags copied');
+  });
+
+  it('attaches the backup link to the page and revokes its URL later', () => {
+    vi.useFakeTimers();
+    const revoke = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {});
+    vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:backup');
+    const connected: boolean[] = [];
+    const clickSpy = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(function (this: HTMLAnchorElement) {
+      connected.push(this.isConnected);
+    });
+    mount({});
+    click(root, '[data-action="backup"]');
+    expect(connected).toEqual([true]);
+    expect(revoke).not.toHaveBeenCalled();
+    vi.runAllTimers();
+    expect(revoke).toHaveBeenCalledWith('blob:backup');
+    clickSpy.mockRestore();
+    vi.restoreAllMocks();
+    vi.useRealTimers();
+  });
+
   it('keeps flags when the share is cancelled', async () => {
     const share = vi.fn().mockRejectedValue(new DOMException('x', 'AbortError'));
     mount({ share });

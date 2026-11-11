@@ -1,6 +1,9 @@
 import { defineConfig } from 'vitest/config';
 import { VitePWA } from 'vite-plugin-pwa';
 
+/** The review build's path, with or without a trailing slash: the learner SW (scope /ball-on/) must never answer it. */
+export const REVIEW_PATH = /^\/ball-on\/review(\/|$)/;
+
 // Two builds from one codebase (ADR 0005): the Learner app at /ball-on/ and the Review build at /ball-on/review/.
 export default defineConfig(({ mode }) => {
   const review = mode === 'review';
@@ -20,7 +23,7 @@ export default defineConfig(({ mode }) => {
           globPatterns: ['**/*.{js,css,html,svg,png,webmanifest}'],
           // The learner service worker's scope (/ball-on/) contains the review build's URL: never answer for it.
           globIgnores: review ? [] : ['review/**'],
-          navigateFallbackDenylist: review ? [] : [/^\/ball-on\/review\//],
+          navigateFallbackDenylist: review ? [] : [REVIEW_PATH],
         },
         manifest: {
           name: review ? 'Ball On (Review)' : 'Ball On',

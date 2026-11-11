@@ -29,7 +29,7 @@
       "explanation": "Potting a ball not on costs the higher of the ball on and the ball potted: blue, 5. The cue-ball is only clear of a snooker if both extreme edges of some ball on can be hit. One edge isn't enough, so the incoming player is snookered and you call FREE BALL. They can take the free ball, play the ball on normally, or ask the offender to play again.",
       "diagram": {
         "view": "top",
-        "caption": "Cue-ball behind the black; three reds beyond the black and pink",
+        "caption": "Cue-ball behind the black; two reds between the black and pink, one red beyond the pink",
         "balls": [
           {
             "ball": "white",
@@ -95,7 +95,7 @@
       "explanation": "One red with both edges clear means the cue-ball isn't snookered, however many other reds are blocked. It's a 5-point foul for potting the blue, with no free ball.",
       "diagram": {
         "view": "top",
-        "caption": "Cue-ball behind the black; one red well to the right",
+        "caption": "Cue-ball behind the black; one red well to the right, one between the black and pink, one beyond the pink",
         "balls": [
           {
             "ball": "white",

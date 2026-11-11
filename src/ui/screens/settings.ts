@@ -5,8 +5,8 @@ import { exportJson, importJson } from '../../storage/store';
 import type { Ctx } from '../context';
 import { h } from '../dom';
 
-export function renderSettings(el: HTMLElement, ctx: Ctx): void {
-  const status = h('p', { class: 'note', role: 'status' });
+export function renderSettings(el: HTMLElement, ctx: Ctx, message = ''): void {
+  const status = h('p', { class: 'note', role: 'status' }, message);
   const say = (text: string) => { status.textContent = text; };
   const flags = ctx.data.flags.length;
 
@@ -17,8 +17,7 @@ export function renderSettings(el: HTMLElement, ctx: Ctx): void {
       if (result === 'shared' || result === 'copied') {
         ctx.data.flags = [];
         ctx.persist();
-        renderSettings(el, ctx);
-        return say(result === 'copied' ? 'Flags copied. Paste them into a message to Rani.' : 'Flags sent.');
+        return renderSettings(el, ctx, result === 'copied' ? 'Flags copied. Paste them into a message to Rani.' : 'Flags sent.');
       }
       if (result === 'failed') say("Couldn't share or copy the flags on this device.");
     },
@@ -29,9 +28,11 @@ export function renderSettings(el: HTMLElement, ctx: Ctx): void {
     onclick: () => {
       const blob = new Blob([exportJson(ctx.data)], { type: 'application/json' });
       const a = h('a', { href: URL.createObjectURL(blob), download: `ball-on-backup-${new Date(ctx.now()).toISOString().slice(0, 10)}.json` });
+      // Some mobile browsers only download from a link that's in the page and whose URL is still alive.
+      document.body.append(a);
       a.click();
-      URL.revokeObjectURL(a.href);
-      say('Backup saved to your downloads.');
+      setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+      say('Backup file created. Check your downloads.');
     },
   }, 'Back up progress');
 

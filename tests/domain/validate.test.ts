@@ -72,3 +72,9 @@ describe('diagram view', () => {
   it('rejects an unknown view', () =>
     expect(validateQuestion({ ...scenario(), diagram: { balls: [], view: 'left' } }, OPTION_IDS, TOPICS).join()).toContain('view'));
 });
+
+describe('FOUL vs FOUL AND A MISS', () => {
+  it('rejects both in one Ruling', () =>
+    expect(validateQuestion(scenario({ ruling: { ...scenario().ruling, calls: ['FOUL', 'FOUL_AND_A_MISS'] } }), OPTION_IDS, TOPICS).join())
+      .toContain('FOUL_AND_A_MISS'));
+});
