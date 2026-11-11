@@ -36,6 +36,12 @@ describe('Review build', () => {
     expect(root.querySelector('[data-action="drafts"]')?.textContent).toContain('Drafts to review (2)');
   });
 
+  it('points the reviewer at Drafts when nothing is reviewed yet', () => {
+    mountApp(root, bankOf([scenario({ status: 'draft' })]), 'review', { now, storage });
+    expect(root.textContent).toContain('Start with the Drafts above');
+    expect(root.textContent).not.toContain('Rani is still checking them');
+  });
+
   it('keeps drafts out of the Drill', () => {
     mountApp(root, bankOf(drafts()), 'review', { now, storage });
     expect(root.querySelector('[data-action="drill"]')?.textContent).toContain('1 question');

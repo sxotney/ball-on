@@ -6,7 +6,9 @@ export function renderHome(el: HTMLElement, ctx: Ctx, extras: HTMLElement[] = []
   const { questions, topics } = ctx.bank;
   const body: (HTMLElement | false)[] = [h('h1', {}, 'Ball On'), ...extras];
   if (questions.length === 0) {
-    body.push(h('p', { class: 'empty' }, 'No reviewed questions yet. Rani is still checking them.'));
+    body.push(h('p', { class: 'empty' }, ctx.mode === 'review'
+      ? 'No Reviewed questions yet. Start with the Drafts above.'
+      : 'No reviewed questions yet. Rani is still checking them.'));
   } else {
     const ready = buildDrill(questions, ctx.data.progress, ctx.now(), ctx.rng).length;
     body.push(ready > 0

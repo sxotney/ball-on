@@ -1,1 +1,453 @@
-{ "topic": "free-ball", "questions": [] }
+{
+  "topic": "free-ball",
+  "questions": [
+    {
+      "id": "fb-001",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S2 R17",
+        "S3 R12",
+        "S3 R11(b)(iii)"
+      ],
+      "prompt": "Three reds remain. The striker hits a red first, but the blue goes into a pocket. After the blue is re-spotted, the cue-ball sits behind the black as shown. It can reach only one edge of the red to the right of the pink; that red's other edge and the other two reds are blocked by the black and pink.",
+      "ruling": {
+        "calls": [
+          "FOUL",
+          "FREE_BALL"
+        ],
+        "penaltyPoints": 5,
+        "options": [
+          "PLAY_FREE_BALL",
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "Potting a ball not on costs the higher of the ball on and the ball potted: blue, 5. The cue-ball is only clear of a snooker if both extreme edges of some ball on can be hit. One edge isn't enough, so the incoming player is snookered and you call FREE BALL. They can take the free ball, play the ball on normally, or ask the offender to play again.",
+      "diagram": {
+        "view": "top",
+        "caption": "Cue-ball behind the black; three reds beyond the black and pink",
+        "balls": [
+          {
+            "ball": "white",
+            "x": 889,
+            "y": 140
+          },
+          {
+            "ball": "black",
+            "x": 889,
+            "y": 324
+          },
+          {
+            "ball": "pink",
+            "x": 889,
+            "y": 892.25
+          },
+          {
+            "ball": "blue",
+            "x": 889,
+            "y": 1784.5
+          },
+          {
+            "ball": "red",
+            "x": 820,
+            "y": 700
+          },
+          {
+            "ball": "red",
+            "x": 889,
+            "y": 960
+          },
+          {
+            "ball": "red",
+            "x": 990,
+            "y": 620
+          }
+        ]
+      }
+    },
+    {
+      "id": "fb-002",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S2 R17",
+        "S3 R11(b)(iii)",
+        "S3 R10(h)"
+      ],
+      "prompt": "Three reds remain. The striker hits a red first, but the blue goes into a pocket. After the blue is re-spotted, the cue-ball sits behind the black as shown. Both edges of the red on the right are clear; the other two reds are blocked by the black and pink.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 5,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "One red with both edges clear means the cue-ball isn't snookered, however many other reds are blocked. It's a 5-point foul for potting the blue, with no free ball.",
+      "diagram": {
+        "view": "top",
+        "caption": "Cue-ball behind the black; one red well to the right",
+        "balls": [
+          {
+            "ball": "white",
+            "x": 889,
+            "y": 140
+          },
+          {
+            "ball": "black",
+            "x": 889,
+            "y": 324
+          },
+          {
+            "ball": "pink",
+            "x": 889,
+            "y": 892.25
+          },
+          {
+            "ball": "blue",
+            "x": 889,
+            "y": 1784.5
+          },
+          {
+            "ball": "red",
+            "x": 820,
+            "y": 700
+          },
+          {
+            "ball": "red",
+            "x": 889,
+            "y": 960
+          },
+          {
+            "ball": "red",
+            "x": 1180,
+            "y": 620
+          }
+        ]
+      }
+    },
+    {
+      "id": "fb-003",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S2 R17(c)"
+      ],
+      "prompt": "Red is on. After a foul, the cue-ball is blocked from one red by the pink and from another red by the black, and no red is fully visible. Which ball is the effective snookering ball?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "The pink",
+          "The black",
+          "Both",
+          "Neither: there's no effective snookering ball"
+        ],
+        "correct": "Neither: there's no effective snookering ball"
+      },
+      "explanation": "When different reds are blocked by different balls not on, no single ball is the effective snookering ball."
+    },
+    {
+      "id": "fb-004",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S2 R17(e)",
+        "S3 R11(b)(iii)",
+        "S3 R10(h)"
+      ],
+      "prompt": "Reds remain. The striker hits a red first, but the blue goes into a pocket. The cue-ball finishes in the jaws of a corner pocket, where the cushion nose blocks every straight path to the reds. No ball is in the way.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 5,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "A cushion can never snooker the cue-ball; only balls not on can. There's no free ball, just a 5-point foul for potting the blue."
+    },
+    {
+      "id": "fb-005",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S2 R17(a)",
+        "S3 R11(a)(vii)",
+        "S3 R12"
+      ],
+      "prompt": "Reds remain. The striker hits a red, then the cue-ball goes in-off. Wherever the cue-ball is placed in the D, every red is at least partly blocked by the brown or the green.",
+      "ruling": {
+        "calls": [
+          "FOUL",
+          "FREE_BALL"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FREE_BALL",
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "IN_HAND"
+      },
+      "explanation": "Going in-off costs the value of the ball on, so the minimum of 4, and the cue-ball is in-hand. From in-hand, the cue-ball is snookered only if it's blocked from every possible position in the D. Here it is, so call FREE BALL."
+    },
+    {
+      "id": "fb-006",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S2 R17(a)",
+        "S3 R11(a)(vii)",
+        "S3 R10(h)"
+      ],
+      "prompt": "Reds remain. The striker hits a red, then the cue-ball goes in-off. From most of the D the reds are blocked by the brown, but from one spot near the yellow both edges of a red are clear.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "IN_HAND"
+      },
+      "explanation": "Just one position in the D with a clear view of both edges of a red means the incoming player is not snookered. It's a foul for 4 with the cue-ball in-hand, and no free ball."
+    },
+    {
+      "id": "fb-007",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R12(a)(ii)",
+        "S3 R12(c)"
+      ],
+      "prompt": "Reds remain. After a FREE BALL, the incoming player nominates the green as a red and pots it. How many points do they score?",
+      "answer": {
+        "type": "number",
+        "value": 1
+      },
+      "explanation": "A free ball takes the value of the ball on, here a red, so it scores 1. The green is then re-spotted."
+    },
+    {
+      "id": "fb-008",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R12(c)"
+      ],
+      "prompt": "Reds remain. A green nominated as a free ball is potted. What happens to the green?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "It's re-spotted",
+          "It stays off the table",
+          "It goes back where it was",
+          "It stays off until the colours stage"
+        ],
+        "correct": "It's re-spotted"
+      },
+      "explanation": "A potted free ball is always re-spotted."
+    },
+    {
+      "id": "fb-009",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R12(e)"
+      ],
+      "prompt": "Reds remain. After a FREE BALL, the striker nominates the green as a red. The cue-ball hits the green first, and the green and a red both go into pockets. How many points?",
+      "answer": {
+        "type": "number",
+        "value": 2
+      },
+      "explanation": "When the ball on is a red, every ball potted counts, so the free ball (1) and the red (1) make 2. The green is re-spotted and the red stays off."
+    },
+    {
+      "id": "fb-010",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R12(e)"
+      ],
+      "prompt": "Colours stage, yellow on. After a FREE BALL, the striker nominates the blue as the yellow. The blue is hit first, and both the blue and the yellow are potted. How many points?",
+      "answer": {
+        "type": "number",
+        "value": 2
+      },
+      "explanation": "When the free ball and a colour on are both potted, only the ball on scores: the yellow's 2. The blue is re-spotted and the yellow stays off."
+    },
+    {
+      "id": "fb-011",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R12(b)(ii)",
+        "S3 R11(a)(viii)",
+        "S3 R12"
+      ],
+      "prompt": "Reds remain. After a FREE BALL, the striker nominates the pink as a red, hits it first and pots nothing. The cue-ball stops so that the pink alone blocks every red from it.",
+      "ruling": {
+        "calls": [
+          "FOUL",
+          "FREE_BALL"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FREE_BALL",
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "Leaving the opponent snookered behind the nominated free ball after a non-scoring stroke is a foul for the value of the ball on, so 4. The incoming player is snookered after a foul, so they get a free ball too."
+    },
+    {
+      "id": "fb-012",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R12(b)(ii)"
+      ],
+      "prompt": "Only the pink and black remain, and the pink is on. After a FREE BALL, the striker nominates the black as the pink, hits it first and pots nothing, leaving the cue-ball snookered behind the black on the pink.",
+      "ruling": {
+        "calls": [
+          "NO_FOUL"
+        ],
+        "penaltyPoints": 0,
+        "options": [
+          "NEXT_PLAYER_PLAYS"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "Snookering behind the free ball isn't a foul when only two object balls remain, such as pink and black. It's a legal, non-scoring stroke, so the next player plays from where the balls lie."
+    },
+    {
+      "id": "fb-013",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R11(a)(i)",
+        "S3 R3(h)(iv)"
+      ],
+      "prompt": "Colours stage, brown on. After a FREE BALL, the striker nominates the blue as the brown and pots it. Before you've finished re-spotting the blue, the striker plays the next stroke at the brown.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "The free ball must be fully re-spotted before the next stroke. Playing too early is a foul for the value of the ball on, the brown's 4, and the points for the potted free ball don't count."
+    },
+    {
+      "id": "fb-014",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R12(f)"
+      ],
+      "prompt": "After a foul you call FREE BALL. The incoming player asks the offender to play again. The offender is snookered. Can the offender nominate a free ball?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "Yes, the free ball carries over",
+          "No, the free ball option is void",
+          "Only if you allow it"
+        ],
+        "correct": "No, the free ball option is void"
+      },
+      "explanation": "Asking the offender to play again cancels the free ball option."
+    },
+    {
+      "id": "fb-015",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R6",
+        "S3 R12(b)(i)",
+        "S3 R12(d)"
+      ],
+      "prompt": "Reds remain. After a FREE BALL, the striker nominates the yellow as a red. The cue-ball hits the yellow and a red at the same moment, and the red is potted.",
+      "ruling": {
+        "calls": [
+          "NO_FOUL"
+        ],
+        "penaltyPoints": 0,
+        "options": [
+          "STRIKER_CONTINUES"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "Hitting the nominated free ball and a ball on at the same time is allowed. The red is scored and stays off, and the striker plays on."
+    },
+    {
+      "id": "fb-016",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "judgement",
+      "citations": [
+        "S2 R12",
+        "S3 R11(d)(v)"
+      ],
+      "prompt": "After a FREE BALL, the striker says nothing and simply cues up towards the green, which isn't on. How do you handle the nomination?",
+      "considerations": "A free ball has to be nominated: indicated to your satisfaction or declared aloud. If you're not sure which ball they mean, ask them to declare it before the stroke. Refusing to declare when you ask is a 7-point foul. Cueing clearly at one ball may satisfy you, but don't guess."
+    },
+    {
+      "id": "fb-017",
+      "topic": "free-ball",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "judgement",
+      "citations": [
+        "S2 R17",
+        "S5 R1(b)"
+      ],
+      "prompt": "After a foul, the cue-ball is close to the black. The striker asks if it's a free ball. From behind the cue-ball, one edge of a red is clearly visible, but the path to the other edge seems to just clip the black. How do you decide?",
+      "considerations": "The test is whether both extreme edges of any ball on can be hit in a straight line without any ball not on getting in the way. Sight each edge from behind the cue-ball, low on the line. The decision is yours: the players can't measure, and you mustn't advise on how to play the shot. If any part of the path to an edge is blocked, the cue-ball is snookered."
+    }
+  ]
+}
