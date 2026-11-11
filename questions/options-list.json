@@ -1,0 +1,12 @@
+[
+  { "id": "PLAY_FROM_POSITION_LEFT", "label": "Play the next stroke from the position left", "citation": "S3 R10(f)" },
+  { "id": "PLAY_FREE_BALL", "label": "Play from the position left, nominating a free ball", "citation": "S3 R12(a)" },
+  { "id": "OFFENDER_AGAIN_POSITION_LEFT", "label": "Ask the offender to play again from the position left", "citation": "S3 R10(h)(ii)" },
+  { "id": "OFFENDER_AGAIN_ORIGINAL", "label": "Ask the offender to play again with all balls replaced to the original position", "citation": "S3 R14(b)" },
+  { "id": "PLAY_FROM_ORIGINAL", "label": "Have all balls replaced and play the next stroke themselves", "citation": "S3 R16(a)(ii)" },
+  { "id": "STRIKER_CONTINUES", "label": "No choice: the striker's turn continues", "citation": "S3 R3(k)" },
+  { "id": "NEXT_PLAYER_PLAYS", "label": "No choice: the next player plays from where the balls lie", "citation": "S3 R3(j)" },
+  { "id": "FRAME_AWARDED", "label": "Frame awarded to the non-offender", "citation": "S3 R14(d)(ii)" },
+  { "id": "FRAME_ENDS", "label": "The frame ends", "citation": "S3 R4(a)" },
+  { "id": "RESPOTTED_BLACK", "label": "Re-spotted Black: draw lots, next player plays from in-hand", "citation": "S3 R4(b)" }
+]
