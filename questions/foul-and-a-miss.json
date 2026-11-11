@@ -1,1 +1,430 @@
-{ "topic": "foul-and-a-miss", "questions": [] }
+{
+  "topic": "foul-and-a-miss",
+  "questions": [
+    {
+      "id": "fam-001",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(c)",
+        "S3 R11(a)(vi)",
+        "S3 R14(b)"
+      ],
+      "prompt": "Reds remain and neither player needs snookers. The striker is on a red and has a clear, straight path to the full face of a red. The cue-ball misses every ball and stops in the open. The incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL_AND_A_MISS"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT",
+          "OFFENDER_AGAIN_ORIGINAL"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "With a clear straight path to a ball on, failing to hit it first is always a miss. The only exception is when someone needs penalty points and you're satisfied it wasn't deliberate. Hitting nothing costs the value of the ball on, which raises to the minimum of 4. The incoming player can play from where the balls lie, or ask the offender to play again from there or with everything replaced."
+    },
+    {
+      "id": "fam-002",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(a)",
+        "S3 R11(b)(iv)",
+        "S3 R10(h)"
+      ],
+      "prompt": "Reds remain and neither player needs snookers. The striker is snookered behind the black and tries a two-cushion escape. The cue-ball hits the pink before any red. You judge it was a genuine, skilful attempt to hit a red. The incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 6,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "With no clear path, whether to call a miss is your judgement of the attempt. You judged it a proper attempt, so it's a plain foul. The penalty is the higher of the ball on (a red, so the minimum 4) and the ball first hit (pink, 6). With no miss, replacing the balls isn't one of the options."
+    },
+    {
+      "id": "fam-003",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(a)",
+        "S3 R11(b)(iv)",
+        "S3 R14(b)"
+      ],
+      "prompt": "Reds remain and neither player needs snookers. The striker is snookered behind the black and tries a two-cushion escape. The cue-ball hits the pink before any red. You judge the attempt was well short of this player's best. The incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL_AND_A_MISS"
+        ],
+        "penaltyPoints": 6,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT",
+          "OFFENDER_AGAIN_ORIGINAL"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "The striker must try their best to hit the ball on. You judged they didn't, and nobody needs snookers, so it's FOUL AND A MISS. The penalty is the pink's 6, because that's higher than the ball on. Because a miss was called, the non-offender can also have the balls replaced and make the offender play again."
+    },
+    {
+      "id": "fam-004",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(a)(i)",
+        "S3 R14(c)",
+        "S3 R11(a)(vi)"
+      ],
+      "prompt": "Reds remain. Before this stroke the striker needs snookers. They play at a red with a clear straight path, try a very thin contact, and miss it; the cue-ball touches nothing. You're satisfied the miss was not intentional. The incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "Even with a clear path, no miss is called when a player needed penalty points and you're satisfied the miss wasn't intentional. Hitting nothing costs the value of the ball on, so 4. Without a miss, the balls can't be replaced."
+    },
+    {
+      "id": "fam-005",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(a)(i)",
+        "S3 R11(a)(vi)",
+        "S4 R2(d)"
+      ],
+      "prompt": "Reds remain. Before this stroke neither player needs snookers, but the 4-point penalty from a foul now would leave the striker needing them. Snookered on the reds, the striker attempts an escape and misses everything. You're satisfied the miss was not intentional. The incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "The exception covers a player who needed penalty points before the stroke or because of it. Here the penalty itself leaves the striker needing snookers, and you're satisfied it wasn't deliberate, so it's a foul but not a miss. Had you thought the striker fouled on purpose to reach that position, it would be Unsporting Conduct."
+    },
+    {
+      "id": "fam-006",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R14(d)(ii)"
+      ],
+      "prompt": "Full-ball contact on a red was available. After a FOUL AND A MISS the balls are replaced, and the striker fails to hit a red again from the original position. The non-offender asks for the balls to be replaced again. What must you do before the next stroke?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "Nothing extra: play continues",
+          "Warn the striker that another failure will give the frame to the opponent",
+          "Award the frame to the opponent",
+          "Give the non-offender the cue-ball in-hand"
+        ],
+        "correct": "Warn the striker that another failure will give the frame to the opponent"
+      },
+      "explanation": "After a second failure from the original position with full-ball contact available, the striker must be Warned before playing again. A third failure then loses the frame."
+    },
+    {
+      "id": "fam-007",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R14(d)(ii)"
+      ],
+      "prompt": "Full-ball contact is available and the Warning has been given. With the balls replaced, the striker fails to hit a red for the third time from the original position. What happens?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "FOUL AND A MISS, and the sequence continues",
+          "The frame is awarded to the opponent",
+          "Foul only, and the sequence ends",
+          "The frame is re-racked"
+        ],
+        "correct": "The frame is awarded to the opponent"
+      },
+      "explanation": "Once Warned, a further failure from the original position means the frame is awarded to the opponent."
+    },
+    {
+      "id": "fam-008",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R14(d)(ii)"
+      ],
+      "prompt": "Full-ball contact is available. You forgot to give the Warning after the second failure. With the balls replaced, the striker fails for a third time. What now?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "The frame is awarded to the opponent anyway",
+          "Call FOUL AND A MISS and give the Warning now; the frame can only be awarded after a further failure",
+          "The sequence restarts from the first miss",
+          "No miss can be called"
+        ],
+        "correct": "Call FOUL AND A MISS and give the Warning now; the frame can only be awarded after a further failure"
+      },
+      "explanation": "A frame can't be awarded unless the Warning was given. If it was missed, give it at the first opportunity while the sequence continues."
+    },
+    {
+      "id": "fam-009",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R14(d)(iii)"
+      ],
+      "prompt": "After a second FOUL AND A MISS with full-ball contact available, the non-offender asks the offender to play from the position left instead of having the balls replaced. What happens to the miss sequence?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "It continues, so the next failure awards the frame",
+          "It ends",
+          "It pauses until the balls are next replaced"
+        ],
+        "correct": "It ends"
+      },
+      "explanation": "Choosing to play from the position left ends the Foul and a Miss sequence. Any later failure starts a fresh count."
+    },
+    {
+      "id": "fam-010",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(e)",
+        "S3 R11(b)(vi)"
+      ],
+      "prompt": "Reds remain. After a FOUL AND A MISS the balls have been replaced to the original position. While getting down on the shot, before any stroke, the striker's sleeve brushes a red and moves it a few centimetres.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT",
+          "OFFENDER_AGAIN_ORIGINAL"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "No stroke was played, so no miss can be called. Touching a ball in play costs the higher of the ball on and the ball touched (both reds), so the minimum of 4. The non-offender can play from the position left, or ask the offender to play again from the position left or with the balls replaced."
+    },
+    {
+      "id": "fam-011",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R14(e)"
+      ],
+      "prompt": "A Warning is in force in a Foul and a Miss sequence. After the balls are replaced, the striker brushes a red with their sleeve before playing. The non-offender has the balls replaced and asks the offender to play again. Is the Warning still in force?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "Yes, because the balls are back in their original position",
+          "No, because a new foul always ends the sequence",
+          "Only if you decide it should be"
+        ],
+        "correct": "Yes, because the balls are back in their original position"
+      },
+      "explanation": "The Warning stays in force only when all the balls go back to their original position. If the non-offender chose the position left instead, it would lapse."
+    },
+    {
+      "id": "fam-012",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(a)(ii)",
+        "S3 R11(b)(iv)",
+        "S3 R10(h)"
+      ],
+      "prompt": "Reds remain and neither player needs snookers. You judge that it's impossible for the striker to hit any red. They play directly at the nearest red with enough pace to have reached it, but the cue-ball hits the blue, which is in the way. The incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL"
+        ],
+        "penaltyPoints": 5,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "When the ball on can't be hit, the striker is treated as trying to hit it if they play at it, directly or off cushions, hard enough to reach it but for the obstruction. So there's no miss. The penalty is the higher of the ball on and the blue: 5."
+    },
+    {
+      "id": "fam-013",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(a)(ii)",
+        "S3 R11(b)(iv)",
+        "S3 R14(b)"
+      ],
+      "prompt": "Reds remain and neither player needs snookers. You judge that it's impossible for the striker to hit any red. They play towards the nearest red so softly that, in your opinion, the cue-ball could never have reached it even with the blue out of the way. The cue-ball stops against the blue. The incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL_AND_A_MISS"
+        ],
+        "penaltyPoints": 5,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT",
+          "OFFENDER_AGAIN_ORIGINAL"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "The 'impossible to hit' exception only applies if the stroke was strong enough to reach the ball on but for the obstruction. This wasn't, so call FOUL AND A MISS, with the blue's value of 5 as the penalty."
+    },
+    {
+      "id": "fam-014",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R14(c)",
+        "S3 R11(b)(iv)",
+        "S3 R14(b)"
+      ],
+      "prompt": "All the reds have gone and the yellow is on. Neither player needs snookers. The striker has a clear, straight path to the full face of the yellow, but the cue-ball hits the green first. Nothing is potted and the incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL_AND_A_MISS"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT",
+          "OFFENDER_AGAIN_ORIGINAL"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "A clear path means a miss, at the colours stage too. The penalty is the higher of yellow (2) and green (3), raised to the minimum of 4."
+    },
+    {
+      "id": "fam-015",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R14(d)"
+      ],
+      "prompt": "For the rule that lets a frame be awarded after repeated failures, which of these counts the same as full-ball contact being available?",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "The cue-ball touching a ball that could be on",
+          "The ball on being close to a cushion",
+          "The striker needing snookers",
+          "One edge of a red being visible"
+        ],
+        "correct": "The cue-ball touching a ball that could be on"
+      },
+      "explanation": "The three-failure rule applies when full-ball contact was available, or when the cue-ball was touching a ball that could be on."
+    },
+    {
+      "id": "fam-016",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "scenario",
+      "citations": [
+        "S3 R19(a)",
+        "S3 R19(b)"
+      ],
+      "prompt": "Six Reds. Neither player needs penalty points. After a fourth consecutive FOUL AND A MISS the striker was Warned. From the original position they fail to hit a red again, and the cue-ball touches nothing: a fifth FOUL AND A MISS. The incoming player is not snookered.",
+      "ruling": {
+        "calls": [
+          "FOUL_AND_A_MISS"
+        ],
+        "penaltyPoints": 4,
+        "options": [
+          "PLAY_FROM_POSITION_LEFT",
+          "OFFENDER_AGAIN_POSITION_LEFT",
+          "SIX_REDS_BALL_IN_HAND"
+        ],
+        "cueBall": "WHERE_IT_LIES"
+      },
+      "explanation": "Six Reds allows no more than five consecutive calls with the balls replaced. After the fifth, replacing them isn't an option. The non-offender can play from where the balls lie, ask the opponent to, or place the cue-ball anywhere (that last option isn't available if anyone needed penalty points)."
+    },
+    {
+      "id": "fam-017",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "recall",
+      "citations": [
+        "S3 R19(b)"
+      ],
+      "prompt": "In Six Reds, after how many consecutive FOUL AND A MISS calls do you Warn the offender?",
+      "answer": {
+        "type": "number",
+        "value": 4
+      },
+      "explanation": "After the fourth consecutive call, Warn them about what the non-offender may choose if a fifth miss is called."
+    },
+    {
+      "id": "fam-018",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "judgement",
+      "citations": [
+        "S3 R14(a)"
+      ],
+      "prompt": "Reds remain. The striker trails by 20 with 51 left on the table, so nobody needs snookers. Tight behind the brown, they attempt a two-cushion escape at a sensible pace and miss the nearest red by about a ball's width. Do you call FOUL AND A MISS?",
+      "considerations": "There's no clear path, so it comes down to whether this was the striker's best attempt. Weigh how hard the escape was, the line and pace chosen, the player's standard, and how narrowly they missed. Being consistent through the match matters as much as any single call. Nobody needs snookers, so the needing-points exception doesn't help the striker. If you do call a miss, the non-offender may have the balls replaced."
+    },
+    {
+      "id": "fam-019",
+      "topic": "foul-and-a-miss",
+      "edition": "2024-09",
+      "status": "draft",
+      "kind": "judgement",
+      "citations": [
+        "S3 R14(a)(i)",
+        "S4 R1(a)"
+      ],
+      "prompt": "The striker needs snookers. Instead of trying to hit the red, they seem to play a deliberate safety: the cue-ball misses the red and leaves the opponent in an awkward spot. Do you call a miss?",
+      "considerations": "Needing snookers only excuses a miss if you're satisfied it wasn't intentional. If you believe the striker missed on purpose to gain an advantage, call FOUL AND A MISS. Look at the line and pace: was the cue-ball ever going to reach a red? Deliberately fouling can also be Unsporting Conduct."
+    }
+  ]
+}
