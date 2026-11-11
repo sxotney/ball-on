@@ -5,6 +5,7 @@ import { load, save, type BuildMode } from '../storage/store';
 import type { Ctx } from './context';
 import { draftsHomeExtras, renderDrafts } from './screens/drafts';
 import { renderHome } from './screens/home';
+import { renderSettings } from './screens/settings';
 import { renderSession, startSession } from './screens/session';
 
 export interface AppDeps { now?: () => number; storage?: Storage; nav?: Navigator; rng?: () => number }
@@ -35,6 +36,7 @@ export function mountApp(root: HTMLElement, bank: Bank, mode: BuildMode, deps: A
   const home = (el: HTMLElement) => renderHome(el, ctx, mode === 'review' ? draftsHomeExtras(ctx, drafts) : []);
   const routes: Route[] = [
     ...extraRoutes,
+    { match: (hash) => hash === '#/settings', render: (el) => renderSettings(el, ctx) },
     ...(mode === 'review' ? [{ match: (hash: string) => hash === '#/drafts', render: (el: HTMLElement) => renderDrafts(el, ctx, drafts) }] : []),
     {
       match: (hash) => hash === '#/drill',
