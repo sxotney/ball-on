@@ -5,7 +5,7 @@ import { h } from '../dom';
 import { citationLine, flagControl } from './feedback';
 import { questionHeader } from './question';
 
-export function renderJudgement(el: HTMLElement, ctx: Ctx, q: JudgementCall, onNext: () => void): void {
+export function renderJudgement(el: HTMLElement, ctx: Ctx, q: JudgementCall, onNext: () => void, finish?: () => HTMLElement): void {
   const after = h('div', { class: 'considerations' });
   const reveal = h('button', {
     type: 'button', class: 'primary', 'data-action': 'show-considerations',
@@ -15,8 +15,9 @@ export function renderJudgement(el: HTMLElement, ctx: Ctx, q: JudgementCall, onN
         h('h2', {}, 'Considerations'),
         h('p', {}, q.considerations),
         citationLine(q.citations),
-        flagControl(ctx, q.id),
-        h('button', { type: 'button', class: 'primary', 'data-action': 'next', onclick: onNext }, 'Next'),
+        ...(finish
+          ? [finish()]
+          : [flagControl(ctx, q.id), h('button', { type: 'button', class: 'primary', 'data-action': 'next', onclick: onNext }, 'Next')]),
       );
     },
   }, 'Show considerations');
