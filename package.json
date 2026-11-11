@@ -8,7 +8,11 @@
     "test": "vitest run",
     "bank": "tsx scripts/build-bank.ts",
     "dev": "npm run bank -- review && vite --mode review",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:learner": "npm run bank -- learner && vite build --mode learner",
+    "build:review": "npm run bank -- review && vite build --mode review",
+    "build": "npm run build:learner && npm run build:review",
+    "preview": "vite preview --mode learner"
   },
   "description": "Snooker referee revision app",
   "devDependencies": {
