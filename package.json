@@ -1,0 +1,25 @@
+{
+  "name": "ball-on",
+  "version": "0.1.0",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "bank": "tsx scripts/build-bank.ts",
+    "dev": "npm run bank -- review && vite --mode review",
+    "typecheck": "tsc --noEmit"
+  },
+  "description": "Snooker referee revision app",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "happy-dom": "^21.0.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.0"
+  },
+  "private": true,
+  "type": "module"
+}
